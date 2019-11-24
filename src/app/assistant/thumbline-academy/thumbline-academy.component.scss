@@ -1,6 +1,6 @@
 .TAContainer {
   background: url(../../../assets/03.png);
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -74,25 +74,6 @@
   visibility: visible !important;
   opacity: 1 !important;
 }
-// @media (max-width: 1255px) {
-//   .academy {
-//     width: 270px !important;
-//   }
-// }
-// @media (min-width: 1255px) {
-//   .academy {
-//     width: 235px !important;
-//   }
-// }
-// @media (max-width: 499px) {
-//   .TAContainer {
-//     margin: 0 !important;
-//   }
-//   .academy {
-//     width: 80% !important;
-//   }
-// }
-
 @media(max-width:1140px){
   .academy{
     flex: 0 0 calc(33% - 3%)!important;

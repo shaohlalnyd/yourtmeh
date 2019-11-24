@@ -1,4 +1,4 @@
-<div class="sContainer">
+<!-- <div class="sContainer">
     <div class="saleBtn  mt-5 w-100 d-flex justify-content-center align-items-center">
         <button mat-raised-button (click)="ngxSmartModalService.getModal('saleAddModal').open()" style="background-color: #945c32;color: #ffffff;">آگهی فروش</button>
     </div>
@@ -64,6 +64,22 @@
             </div>
         </div>
     </div>
+</div> -->
+<div class="SContainer">
+    <div class="title">
+        <p>خرید و فروش اسب</p>
+    </div>
+        <div class="ads">
+            <div class="ad adAnimation"
+                [ngStyle]="{height: adWidth+(adWidth*0.25)+'px'}" >
+                <img src="../../../assets/bg-img/h1.jpg">
+                <span class="hName">horse name</span>
+                <span class="hPrice">horse price</span>
+                <!-- <div class="onhoveredDiv">
+                    <button mat-flat-button style="background-color: #945c32;color: #ffffff;">رفتن به صفحه آگهی</button>
+                </div> -->
+            </div>
+        </div>
 </div>
 <ngx-smart-modal #saleAddModal identifier="saleAddModal">
     <app-sale-ad-modal></app-sale-ad-modal>
