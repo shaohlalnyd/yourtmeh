@@ -1,0 +1,70 @@
+<div class="sContainer">
+    <div class="saleBtn  mt-5 w-100 d-flex justify-content-center align-items-center">
+        <button mat-raised-button (click)="ngxSmartModalService.getModal('saleAddModal').open()" style="background-color: #945c32;color: #ffffff;">آگهی فروش</button>
+    </div>
+    <div class="options mt-5">
+        <div class="adv">
+            <img src="../../assets//bg-img/h6.jfif">
+            <div class="specs">
+                <span class="name">نام اسب</span>
+                <span class="price">قیمت</span>
+                <div class="morespec">
+                    <span class="timeAgo">1 ساعت پیش</span>
+                    <button class="btn grayBtn expr" [routerLink]="['product-detail',10]" >توضیحات</button>
+                    <div class="seen">
+                        <i class="mdi mdi-eye-outline seenIcon"></i>
+                        <span class="seenCount"> 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adv">
+            <img src="../../assets//bg-img/h6.jfif">
+            <div class="specs">
+                <span class="name">نام اسب</span>
+                <span class="price">قیمت</span>
+                <div class="morespec">
+                    <span class="timeAgo">1 ساعت پیش</span>
+                    <button class="btn grayBtn expr" [routerLink]="['product-detail',10]">توضیحات</button>
+                    <div class="seen">
+                        <i class="mdi mdi-eye-outline seenIcon"></i>
+                        <span class="seenCount"> 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adv">
+            <img src="../../assets//bg-img/h6.jfif">
+            <div class="specs">
+                <span class="name">نام اسب</span>
+                <span class="price">قیمت</span>
+                <div class="morespec">
+                    <span class="timeAgo">1 ساعت پیش</span>
+                    <button class="btn grayBtn expr" [routerLink]="['product-detail',10]">توضیحات</button>
+                    <div class="seen">
+                        <i class="mdi mdi-eye-outline seenIcon"></i>
+                        <span class="seenCount"> 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adv">
+            <img src="../../assets//bg-img/h6.jfif">
+            <div class="specs">
+                <span class="name">نام اسب</span>
+                <span class="price">قیمت</span>
+                <div class="morespec">
+                    <span class="timeAgo">1 ساعت پیش</span>
+                    <button class="btn grayBtn expr" [routerLink]="['product-detail',10]">توضیحات</button>
+                    <div class="seen">
+                        <i class="mdi mdi-eye-outline seenIcon"></i>
+                        <span class="seenCount"> 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-smart-modal #saleAddModal identifier="saleAddModal">
+    <app-sale-ad-modal></app-sale-ad-modal>
+</ngx-smart-modal>

@@ -1,0 +1,210 @@
+/* You can add global styles to this file, and also import other style files */
+*
+{
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+body
+{
+	font-family: yekan !important;
+	background-color: #ffffff;;
+}
+div
+{
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ul
+{
+	list-style: none;
+	margin-bottom: 0px;
+}
+p
+{
+	font-family: yekan !important;
+	font-size: 14px;
+	line-height: 1.71;
+	font-weight: 400;
+	color: rgba(0,0,0,0.5);
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+p a
+{
+	display: inline;
+	position: relative;
+	color: inherit;
+	border-bottom: solid 1px #ffa07f;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+p:last-of-type
+{
+	margin-bottom: 0;
+}
+a, a:hover, a:visited, a:active, a:link
+{
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+p a:active
+{
+	position: relative;
+	color: #FF6347;
+}
+p a:hover
+{
+	color: #FFFFFF;
+	background: #ffa07f;
+}
+p a:hover::after
+{
+	opacity: 0.2;
+}
+::selection
+{
+	
+}
+p::selection
+{
+	
+}
+h1{font-size: 40px;}
+h2{font-size: 30px;}
+h3{font-size: 24px;}
+h4{font-size: 18px;}
+h5{font-size: 14px;}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: yekan !important;
+	font-weight: 700;
+	color: #000000;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+@font-face {
+    font-family: 'Yekan';
+    src: url('./assets/Yekan-Font-master/Yekan.eot');
+    src: url('./assets/Yekan-Font-master/Yekan.eot?#iefix') format("embedded-opentype"),
+    url('./assets/Yekan-Font-master/Yekan.woff2') format('woff2'),
+    url('./assets/Yekan-Font-master/Yekan.woff') format('woff'),
+    url('./assets/Yekan-Font-master/Yekan.ttf') format('truetype'),
+	url('./assets/Yekan-Font-master/Yekan.otf') format('opentype'),;
+    font-weight: normal;
+    font-style: normal;
+}
+.slick-prev,.slick-next,.slick-dots{
+	display: none!important;
+}
+.slick-list{
+	height: 110px!important;
+}
+.slick-slide {
+	outline: none !important;
+	}
+
+	textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: none;
+  box-shadow:none;
+  outline: 0 none;
+}
+.a{
+	color: #440D03;
+	color: #F2F3F5;
+	color: #883123;
+	color:#9C9BA0;
+	color: #0E0405;
+	color: #C9A885;
+  }
+.darkBtn{
+	background-color: #883123;
+	color: #ffffff;
+  }
+  .grayBtn{
+	  background-color: #9C9BA0;
+	  color: #ffffff;
+  }
+  .mediumBtn{
+	background-color: #C9A885;
+	color: #ffffff;
+  }
+  .mediumText{
+	  color: #883123;
+  }
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: #C9A885;
+  box-shadow: 0 1px 1px #C9A885 inset, 0 0 8px #C9A885;
+  outline: 0 none;
+}
+.mt25{
+	margin-top: 25px;
+}
+label{
+	color: #C9A885;
+}
+@import "~ngx-smart-modal/ngx-smart-modal";
+@import "app/app.component";
+
+textarea {
+	resize: none;
+	height: 200px!important;
+	direction: rtl;
+ }
+ .mat-tooltip {
+    /* your own custom styles here */ 
+    /* e.g. */
+	font-size: 20px;
+	font-family: yekan!important;
+}
+button {
+	outline: none!important; // this one
+  }
+button span{
+	font-family: yekan;
+}
+app-header ngx-smart-modal .nsm-content{
+	padding: 0!important;
+}

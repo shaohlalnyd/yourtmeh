@@ -1,0 +1,55 @@
+<div class="SDContainer">
+    <div class="box">
+        <div class="description">
+            <span class="name">نام اسب</span>
+            <span class="price">10000 هزار تومان</span>
+            <span class="details">توضیحات اسب</span>
+        </div>
+        <div class="images">
+            <div class="smallImgs">
+                <img src="../../../assets/bg-img/h1.jpg">
+                <img src="../../../assets/bg-img/h1.jpg">
+                <img src="../../../assets/bg-img/h1.jpg">
+                <img src="../../../assets/bg-img/h1.jpg">
+                <img src="../../../assets/bg-img/h1.jpg">
+            </div>
+            <div class="bigImg">
+                <img src="../../../assets/bg-img/h1.jpg">
+                <div class="iconDiv left">
+                    <i class="mdi mdi-arrow-left"></i>
+                </div>
+                <div class="iconDiv right">
+                    <i class="mdi mdi-arrow-right"></i>
+                </div>
+                <div class="bigSizeDiv">
+                    <i class="mdi mdi-resize"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="commentContainer">
+        <app-comment></app-comment>
+    </div>
+    <div class="commentsContainer">
+        <app-comments></app-comments>
+    </div>
+
+    <div class="seeAnotherProduct">
+        <span class="title">Related Products</span>
+        <div class="adv">
+            <img src="../../assets//bg-img/h6.jfif">
+            <div class="specs">
+                <span class="name">نام اسب</span>
+                <span class="price">قیمت</span>
+                <div class="morespec">
+                    <span class="timeAgo">1 ساعت پیش</span>
+                    <button class="btn grayBtn expr" [routerLink]="['product-detail',10]">توضیحات</button>
+                    <div class="seen">
+                        <i class="mdi mdi-eye-outline seenIcon"></i>
+                        <span class="seenCount"> 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

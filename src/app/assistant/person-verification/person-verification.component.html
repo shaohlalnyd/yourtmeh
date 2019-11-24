@@ -1,0 +1,34 @@
+<div class="pvContainer" [ngClass]="{'show': show}">
+    <div class="box">
+        <div class="boxHeader">
+            <div class="mobile" [ngClass]="{'activeRight': activeTab=='mobile'}" (click)="activeTab='mobile'">
+                <span class="mediumText">وارد کردن شماره تلفن</span>
+            </div>
+            <div class="code" [ngClass]="{'activeLeft': activeTab=='code'}" >
+                <span class="mediumText">وارد کردن کد ثبت نام</span>
+            </div>
+        </div>
+        <div class="boxContent">
+            <div class="mobile" *ngIf="activeTab=='mobile'">
+                <label>شماره موبایل</label>
+                <input [(ngModel)]="phoneNumber" type="text" class="form-control text-right"
+                    placeholder="کد تایید به این شماره ارسال میشود.">
+                <div class="w-100 d-flex justify-content-center mt25">
+                    <button (click)="sendPhone()" class="buttonStyle" mat-flat-button>دریافت کد عبور</button>
+                </div>
+                <p *ngIf="error!=''" class="error">{{error}}</p>
+            </div>
+
+            <div class="code" *ngIf="activeTab=='code'">
+                <label>کد ثبت نام</label>
+                <input [(ngModel)]="enteredCode" type="text" class="form-control text-right" placeholder="کد ارسال شده را در اینجا وارد کنید.">
+                <div class="w-100 d-flex justify-content-center mt25">
+                    <button (click)="correctionNumber()" class="correction"  mat-flat-button>اصلاح شماره تلفن</button>
+                    <button (click)="sendCode()" class="buttonStyle" mat-flat-button>ورود</button>
+                </div>
+                <p *ngIf="codeError!=''" class="error">{{codeError}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="close" (click)="show=false"></div>
+</div>

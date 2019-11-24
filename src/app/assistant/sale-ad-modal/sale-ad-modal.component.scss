@@ -1,0 +1,61 @@
+.SAMContainer{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.uploadFile{
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    border: 1px solid #d1d1d1;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 5px;
+    input[type="file"] {
+        display: none;
+    }
+    i{
+        font-size: 30px;
+        color: #8e8e8e;
+    }
+}
+.preview{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    span{
+        color: rgb(255, 103, 103);
+        text-align: right;
+    }
+    .imgDiv{
+        width: calc(33% - 10px);
+        margin: 5px 5px;
+        position: relative;
+        img{
+            border-radius: 8px;
+            width: 100%;
+        }
+        .DID{
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            cursor: pointer;
+            i{
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,32 @@
+<div class="SAMContainer">
+    <label>اسم</label>
+    <input [(ngModel)]="horse.name" type="text" class="form-control mb-2" placeholder="">
+    <label>قیمت</label>
+    <input [(ngModel)]="horse.price" type="text" class="form-control mb-2" placeholder="">
+    <!-- <span class="mb-2" style="direction: rtl;color: #fcc7c7">{{1300 | irc:'t'}}</span> -->
+    <span *ngIf="horse.price!=''" class="mb-2" style="direction: rtl;color: #fcc7c7">{{horse.price | priceToChar}}</span>
+    <label>دسته بندی</label>
+    <select class="browser-default custom-select mb-2" (change)="changecategory($event)" >
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <label>توضیحات</label>
+    <textarea [(ngModel)]="horse.description" class="form-control mb-2"></textarea>
+    <label>افزودن تصویر</label>
+    <div class="uploadFile mb-2" (click)="fileInput.click()">
+        <i class="mdi mdi-plus"></i>
+        <input #fileInput type="file" id="file" (change)="preview(fileInput.files)" multiple  accept="image/*">
+    </div>
+    <div class="preview mb-2">
+        <div class="imgDiv" *ngFor="let img of imgURL;let i =index">
+            <img src={{img}}>
+            <div class="DID">
+                <i class="mdi mdi-close" (click)="removeImg(i)"></i>
+            </div>
+        </div>
+        <span>{{message}}</span>
+    </div>
+    <button (click)="sendAd()" mat-raised-button class="mr-auto ml-auto" style="background-color: #945c32;color: #ffffff;" >ارسال آگهی</button>
+</div>

@@ -1,0 +1,151 @@
+.top_bar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: solid 1px #ebebeb;
+  z-index: 10;
+}
+
+.trans_400 {
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.homeBg {
+  direction: rtl;
+  margin-top: 81px;
+  width: 100%;
+  height: calc(100vh - 81px);
+  background-image: url("../../assets/01.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  .FTDiv {
+    margin-right: 15%;
+    margin-top: 24vh;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    .first {
+      color: #945c32;
+      width: fit-content;
+      font-size: 30px;
+      text-align: center;
+    }
+    .twice {
+      color: #945c32;
+      width: fit-content;
+      font-size: 50px;
+    }
+  }
+}
+@media(max-width:1400px){
+  .FTDiv{
+    margin-top: 16vh!important;
+  }
+}
+
+
+
+.hoursesDiv {
+  width: 95%;
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  .sliderImgDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff00;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  img {
+    width: 85px !important;
+    height: 85px;
+    border-radius: 100%;
+    transition: 0.5s;
+    z-index: 2;
+  }
+}
+.prev,
+.next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: #b1b1b1;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  i {
+    line-height: 0;
+    font-size: 25px;
+  }
+}
+.prev {
+  left: 0;
+  top: 55%;
+  z-index: 2;
+}
+.next {
+  right: -6px;
+  top: 55%;
+  z-index: 2;
+}
+.a {
+  color: #440d03;
+  color: #f2f3f5;
+  color: #883123;
+  color: #9c9ba0;
+  color: #0e0405;
+  color: #c9a885;
+}
+.imgSliderDiv{
+  margin: 0 15%;
+}
+@media(max-width:700px){
+  .homeBg{
+    align-items: center!important;
+    .FTDiv{
+      margin-right: 0!important;
+    }
+  }
+}
+@media(max-width:499px){
+  .imgSliderDiv{
+    margin: 0!important;
+  }
+  .FTDiv{
+    align-items: center!important;
+    span{
+      text-align: center;
+    }
+  }
+}
+
+.title{
+  color: #582e13;
+    font-size: 25px;
+    margin-right: 40px;
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: -30px;
+}
+
+@media(max-width:630px){
+  .next{
+    right: -15px!important;
+  }
+  .prev{
+    left: -15px!important;
+  }
+}

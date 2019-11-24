@@ -1,0 +1,86 @@
+
+
+.lastNews {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    .title {
+      color: #883123 !important;
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+    .news {
+      margin: 0 15px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .new {
+        width: calc(50% - 30px);
+        height: 355px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+        }
+        .description {
+          position: absolute;
+          top: calc(100% - 100px);
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #0000007d;
+          transition: 0.5s;
+          color: #ffffff;
+          text-align: end;
+          padding: 25px 25px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          border-radius: 8px;
+          .title {
+            font-size: 25px;
+            color: #ffffff !important;
+          }
+          .content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-height: 16px;
+            max-height: 130px;
+            -webkit-box-orient: vertical;
+            line-height: 2;
+            font-size: 20px;
+          }
+          .continue {
+            margin-top: auto;
+            background-color: #440D03;
+            font-size: 25px;
+            cursor: pointer;
+            width: fit-content;
+            padding: 5px 15px;
+            color: #ffffff;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+  .new:hover .description {
+    top: 0 !important;
+  }
+  @media(max-width:760px){
+    .new{
+      flex: 0 0 90%!important;
+      margin-bottom:25px;
+    }
+    .news{
+      justify-content: center!important;
+    }
+  }

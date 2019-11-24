@@ -1,0 +1,113 @@
+.pvContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .box{
+        width: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        z-index: 10;
+    }
+    .close{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+}
+.show{
+    visibility: visible;
+    opacity: 1;
+}
+.boxHeader{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row-reverse;
+    .mobile{
+        flex: 0 0 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .code{
+        flex: 0 0 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+.activeRight{
+    border-top: 4px solid #440d03;
+    border-left: 1px solid #440d03;
+}
+.activeLeft{
+    border-top: 4px solid #440d03;
+    border-right: 1px solid #440d03;
+}
+.boxContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    .mobile{
+        text-align: end;
+        width: 100%;
+        padding: 0 10px;        
+        input{
+            text-align: end;
+            direction: rtl;
+            color: #929292;
+        }
+        label{
+            color: #929292;
+        }
+    }
+    .code{
+        text-align: end;
+        width: 100%;
+        padding: 0 10px;
+        
+        input{
+            text-align: end;
+            direction: rtl;
+            color: #929292;
+        }
+        label{
+            color: #929292;
+        }
+    }
+}
+@media (min-width:500px) and(max-width:770px){
+    .box{
+        width: 70%!important;
+    }
+}
+@media (max-width:500px){
+    .box{
+        width: 90%!important;
+    }
+}
+.buttonStyle{
+    color: #fff;
+    background-color: #945c32;
+}
+.error{
+    color: rgb(255, 136, 136);
+    text-align: right;
+    margin-top: 15px;
+}
+.correction{
+    color: #945c32;
+    border: 1px solid;
+    margin-right: 10px;
+}

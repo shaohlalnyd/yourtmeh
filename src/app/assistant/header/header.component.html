@@ -1,0 +1,122 @@
+<!-- <header class="header" [ngClass]="{'closeTopOfHeader': !showTopOfHeader}"> -->
+
+<!-- Top Bar -->
+<!-- <div class="top_bar">
+        <div class="top_bar_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div style="transition: 0.5s;"
+                            class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+
+
+                            <div class="">
+                                021 554 87
+
+                            </div>
+                            <div class="top_bar_right ml-auto">
+
+                                <div class="top_bar_social">
+                                    <span class="top_bar_title social_title">follow us</span>
+                                    <ul>
+                                        <li><a href="#"><i class="mdi  mdi-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="mdi mdi-instagram" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="mdi mdi-twitter" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<!-- Header Content -->
+<!-- <div class="header_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content ">
+                        <div class="logo_container mr-auto">
+                            <a>
+                                <div>
+                                    <img src="../../assets/bg-img/logo.jpg" class="logo_img">
+                                </div>
+                            </a> -->
+<!-- </div>
+                        <button (click)="ngxSmartModalService.getModal('saleModal').open()" style="font-family: yekan;background-color: #C9A885;color: #ffffff;" mat-flat-button>افزودن آگهی</button>
+
+                        <nav class="main_nav_contaner">
+                            <ul class="main_nav d-flex flex-row-reverse"> -->
+<!-- {% for i in menus %} -->
+
+<!-- <li class="active menuOptions" (click)="changeRoute('')"> <a
+                                        [ngClass]="{'active': url==''}"> صفحه اصلی </a></li>
+                                <li class="active menuOptions" (click)="changeRoute('/news')"> <a
+                                        [ngClass]="{'active': url=='news'}">اخبار سوارکاری</a></li>
+                                <li class="active menuOptions" (click)="changeRoute('/sale')"> <a>خرید و فروش اسب</a></li>
+                                <li class="active menuOptions" (click)="changeRoute('/post')"> <a>پست های آموزشی</a></li> -->
+<!-- {% endfor %} -->
+
+<!-- 
+                            </ul>
+                        </nav>
+                        <div class="search ml-auto" [ngClass]="{'activeBorder': showSearch}">
+                            <i class="mdi mdi-magnify" (click)="showSearch=!showSearch"></i>
+                            <input type="text" class="form-control" placeholder="جستجو" -->
+<!-- [ngClass]="{'activeWidth': showSearch}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header> -->
+<!-- <div class="sideBar" [ngClass]="{'sideBarShow': showSideBar,'sideBarMinus':!showTopOfHeader}">
+    <span class="active menuOptions" (click)="changeRoute('')"> <a [ngClass]="{'active': url==''}"> صفحه اصلی </a></span>
+    <span class="active menuOptions" (click)="changeRoute('/news')"> <a [ngClass]="{'active': url=='news'}">اخبار
+            سوارکاری</a></span>
+    <span class="active menuOptions" (click)="changeRoute('/sale')"> <a>خرید و فروش اسب</a></span>
+    <span class="active menuOptions"> <a>پست های آموزشی</a></span>
+</div>
+<div class="burgerDiv">
+    <i class="mdi mdi-menu" (click)="showSideBar=!showSideBar"></i>
+</div>
+<div class="closeSideBar" [ngClass]="{'closeVisible': showSideBar,'showClose':showSideBar}" (click)="showSideBar=false"></div> -->
+<section class="headerContainer" [ngClass]="{'headerShowStyle': !headerNone}">
+    <div class="logoDiv" [ngClass]="{'mtLogo': !headerNone,'logoSmallScreen':showBurger}">
+        <img src="../../../assets/logo.png">
+    </div>
+    <div class="d-flex headerOptions" [ngClass]="{'flex-column': showBurger,'flex-row-reverse':!showBurger,'dNone':headerNone,'d-flex':!headerNone,'height0':headerHeight,'heightAuto':!headerHeight}">
+        <div class="headerOption" [routerLink]="['/']">
+            صفحه اصلی
+            <div routerLinkActive="o1" class="activate"></div>
+        </div>
+        <div class="headerOption" [routerLink]="['/news']">
+            اخبار سوارکاری
+            <div routerLinkActive="01" class="activate"></div>
+        </div>
+        <div class="headerOption" [routerLink]="['/sale']">
+            خرید و فروش اسب
+            <div routerLinkActive="o1" class="activate"></div>
+        </div>
+        <div class="headerOption" [routerLink]="['/post']">
+            پست های آموزشی
+            <div routerLinkActive="o1" class="activate"></div>
+        </div>
+    </div>
+    <button style="position: relative;" [ngClass]="{'mtBurger': !headerNone}" (click)="showHeader()" *ngIf="showBurger" mat-fab color="warn" class="position-absolute burger">
+        <!-- <mat-icon style="font-size: 20px;margin-top: -10px;">menu</mat-icon> -->
+        <i style="font-size: 20px;position: absolute;top: 9px;right: 10px;" class="mdi mdi-menu"></i>
+    </button>
+    <button (click)="ngxSmartModalService.getModal('personVerification').open()" class="mr-auto sendStyles"  mat-flat-button>ارسال آگهی</button>
+</section>
+
+<ngx-smart-modal #saleModal identifier="saleModal">
+    <app-sale-ad-modal></app-sale-ad-modal>
+</ngx-smart-modal>
+<ngx-smart-modal #personVerification identifier="personVerification">
+    <app-person-verification></app-person-verification>
+</ngx-smart-modal>

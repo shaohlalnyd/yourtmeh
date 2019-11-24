@@ -1,0 +1,58 @@
+.commentsBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c1bdbd;
+  padding: 15px;
+  border-radius: 8px;
+  .commentsRow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #c0c0c0;
+    .commentDetail {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      flex-direction: row-reverse;
+      .userImage {
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        border-radius: 100%;
+      }
+      .dateAndUsername {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin-right: 15px;
+        .username {
+          font-size: 14px;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.8);
+        }
+        .dateAndTime {
+          font-size: 10px;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.3);
+          margin-top: 1px;
+        }
+      }
+    }
+    .commentText {
+      font-size: 14px;
+      font-weight: 500;
+      text-align: right;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+    .replyesBtn {
+      width: fit-content;
+      font-size: 11px;
+      margin-bottom: 2px;
+    }
+    .replies{
+        width: 95%;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+
+
+.lastPostst {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-top: 50px;
+    .title{
+      margin: 0 auto;
+      width: fit-content;
+      color: #000000 !important;
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+    .lastPost {
+      width: calc(33% - 20px);
+      margin: 20px;
+      height: 250px;
+      margin-left: 0;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      background-color: #dddddd;
+      color: #565656;
+      font-size: 20px;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: calc(100% - 60px);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      .bottomSide {
+        width: 100%;
+        height: 60px;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+      .date {
+        position: absolute;
+        top: 20px;
+        left: -80px;
+        transition: 0.5s;
+        height: 80px;
+        width: 80px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .lastPost:hover .date {
+    left: 20px !important;
+  }

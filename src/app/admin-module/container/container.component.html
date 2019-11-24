@@ -1,0 +1,110 @@
+<div class="Acontainer">
+    <div class="topbar" [ngClass]="{'bg-white': !largeSize}">
+        <div *ngIf="largeSize" class="topbarLeft" [ngClass]="{'width100': largeSize && largeSizeSmall}">
+            <h2 [ngClass]="{'menuOptionMobileSize': largeSizeSmall && largeSize}">پنل ادمین</h2>
+            <i *ngIf="largeSizeSmall && largeSize" class="mdi mdi-layers-triple"></i>
+        </div>
+        <div class="burgerButton">
+            <i (click)="handleSidebar()" class="mdi mdi-menu"></i>
+            <span>پیشخوان</span>
+        </div>
+        <div class="notifSearch mr-auto">
+            <div class="notifDiv">
+                <div class="newNotif"></div>
+                <i class="mdi mdi-bell-outline"></i>
+            </div>
+            <div class="inputDiv">
+                <input type="text" class="form-control" placeholder="جستجو">
+                <i class="mdi mdi-magnify"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sidenavbar"
+        [ngClass]="{'sideNavMobileSize':  largeSize && largeSizeSmall,smallSizeShow:!largeSize && smallSidebar}">
+        <div class="profile">
+            <div class="profileImg" [ngClass]="{'profileMobile':   largeSize && largeSizeSmall}"></div>
+            <div class="username" [ngClass]="{'menuOptionMobileSize': largeSize && largeSizeSmall }">sahand</div>
+            <div class="settings">
+                <i class="mdi mdi-settings"></i>
+                <i class="mdi mdi-power"></i>
+            </div>
+        </div>
+        <div class="menus">
+            <div class="menuOption" [routerLink]="['dashboard']" routerLinkActive="menuActive" 
+                [ngClass]="{'justify-content-center':  largeSize && largeSizeSmall,'align-items-center':  largeSize && largeSizeSmall,'height38':  largeSize && largeSizeSmall}">
+                <div class="w-100 d-flex justify-content-center align-items-center">
+                    <i class="mdi mdi-layers-triple" [ngClass]="{'biggerFont':  largeSize && largeSizeSmall}"></i>
+                    <span class="title "
+                        [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}">داشبورد</span>
+                    <i class="mdi mdi-chevron-left mr-auto"
+                        [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}"></i>
+                </div>
+                <div *ngIf=" largeSize && largeSizeSmall" class="tooltipDiv" matTooltip="داشبورد"></div>
+            </div>
+            <div class="menuOption" [routerLink]="['users']" routerLinkActive="menuActive" 
+                [ngClass]="{'justify-content-center':  largeSize && largeSizeSmall,'align-items-center':  largeSize && largeSizeSmall,'height38':  largeSize && largeSizeSmall}">
+                <div class="w-100 d-flex justify-content-center align-items-center">
+                    <i class="mdi mdi-account-multiple" [ngClass]="{'biggerFont':  largeSize && largeSizeSmall}"></i>
+                    <span class="title "
+                        [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}">کاربران</span>
+                    <i class="mdi mdi-chevron-left mr-auto"
+                        [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}"></i>
+                </div>
+                <div *ngIf=" largeSize && largeSizeSmall" class="tooltipDiv" matTooltip="کاربران"></div>
+            </div>
+            <div class="menuOption" [routerLink]="['menu']" routerLinkActive="menuActive" 
+                [ngClass]="{'justify-content-center': largeSize && largeSizeSmall,'align-items-center':  largeSize && largeSizeSmall,'height38':  largeSize && largeSizeSmall}">
+                <div class="w-100 d-flex justify-content-center align-items-center">
+                    <i class="mdi mdi-border-outside" [ngClass]="{'biggerFont':  largeSize && largeSizeSmall}"></i>
+                    <span class="title" [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}">منو</span>
+                    <i class="mdi mdi-chevron-left mr-auto"
+                        [ngClass]="{'menuOptionMobileSize':     largeSize && largeSizeSmall}"></i>
+                </div>
+                <!-- <div class="submenus submenuNone">
+                    <span class="submenuOption">حذف</span>
+                    <span class="submenuOption">ادیت</span>
+                    <span class="submenuOption">اضافه کردن</span>
+                </div> -->
+                <div *ngIf=" largeSize && largeSizeSmall" class="tooltipDiv" matTooltip="منو"></div>
+            </div>
+            <div class="menuOption" [routerLink]="['advertising']" routerLinkActive="menuActive" 
+                [ngClass]="{'justify-content-center':     largeSize && largeSizeSmall,'align-items-center':   largeSize && largeSizeSmall,'height38':  largeSize && largeSizeSmall}">
+                <div class="w-100 d-flex justify-content-center align-items-center">
+                    <i class="mdi mdi-billboard" [ngClass]="{'biggerFont':  largeSize && largeSizeSmall}"></i>
+                    <span class="title" [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}">آگهی</span>
+                    <i class="mdi mdi-chevron-left mr-auto"
+                        [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}"></i>
+                </div>
+                <!-- <div class="submenus submenuNone">
+                    <span class="submenuOption">نمایش آگهی</span>
+                    <span class="submenuOption">افزودن آگهی</span>
+                </div> -->
+                <div *ngIf=" largeSize && largeSizeSmall" class="tooltipDiv" matTooltip="آگهی"></div>
+            </div>
+            <div class="menuOption" [routerLink]="['news']" routerLinkActive="menuActive" 
+                [ngClass]="{'justify-content-center':   largeSize && largeSizeSmall,'align-items-center':   largeSize && largeSizeSmall,'height38':  largeSize && largeSizeSmall}">
+                <div class="w-100 d-flex justify-content-center align-items-center">
+                    <i class="mdi mdi-newspaper" [ngClass]="{'biggerFont':  largeSize && largeSizeSmall}"></i>
+                    <span class="title" [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}">اخبار</span>
+                    <i class="mdi mdi-chevron-left mr-auto"
+                        [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}"></i>
+                </div>
+                <div *ngIf="largeSize && largeSizeSmall" class="tooltipDiv" matTooltip="اخبار"></div>
+            </div>
+            <div class="menuOption position-relative"  [routerLink]="['posts']" routerLinkActive="menuActive" 
+                [ngClass]="{'justify-content-center':   largeSize && largeSizeSmall,'align-items-center':   largeSize && largeSizeSmall,'height38':  largeSize && largeSizeSmall}">
+                <div class="w-100 d-flex justify-content-center align-items-center">
+                    <i class="mdi mdi-post-outline" [ngClass]="{'biggerFont':  largeSize && largeSizeSmall}"></i>
+                    <span class="title" [ngClass]="{'menuOptionMobileSize': largeSize && largeSizeSmall}">پست
+                        آموزشی</span>
+                    <i class="mdi mdi-chevron-left mr-auto"
+                        [ngClass]="{'menuOptionMobileSize':   largeSize && largeSizeSmall}"></i>
+                </div>
+                <div *ngIf="largeSize && largeSizeSmall" class="tooltipDiv" matTooltip="پست آموزشی"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="littleComponents" [ngClass]="{'mobileSizeMarginRight': (largeSize && largeSizeSmall),'marginNormal':!largeSize && smallSidebar}">
+    <router-outlet></router-outlet>
+</div>
